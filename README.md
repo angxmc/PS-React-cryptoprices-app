@@ -70,3 +70,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 # PS-React-cryptoprices-app
 # PS-React-cryptoprices-app
+
+#### App.js
+single <Route/> within the <Routes><Routes/>
+created the Routes to different pages 
+
+#### Nav.js
+allows the user to click on a word to navigate to the page using <Link><Link/>
+instead of using <a href to>, this makes the page to request something, where as the Link just listens to an event an take you to the page
