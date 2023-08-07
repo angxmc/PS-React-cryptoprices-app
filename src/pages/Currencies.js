@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
-
-export default function Currencies (props) {
+export default function Currencies(props) {
   const currencies = [
     { name: "Bitcoin", symbol: "BTC" },
     { name: "Litecoin", symbol: "LTC" },
@@ -17,16 +16,18 @@ export default function Currencies (props) {
   //destructure name and symbol for each coin
   //inside the Link we are going to display the name of the coin
   return (
-    <div className="currencies">
+    <div className="">
       {currencies.map((coin) => {
         const { name, symbol } = coin;
 
         return (
           <Link to={`/price/${symbol}`}>
-            <h2>{name}</h2>
+            <h2 className="flex flex-row flex-wrap justify-center bg-stone-500">
+              {name}
+            </h2>
           </Link>
         );
       })}
     </div>
   );
-};
+}

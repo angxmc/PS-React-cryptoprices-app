@@ -7,7 +7,7 @@ export default function Price(props) {
   // const apiKey = "88A2868C-5D35-4300-B32E-6983FCDF795E";
   // Grabbing the Currency symbol from the URL Params
   const params = useParams();
-  const symbol = params.symbol;
+  const { symbol } = params.symbol;
   // Using the other two variables to create our URL
   const url = `https://rest.coinapi.io/v1/exchangerate/${symbol}/USD?apikey=${process.env.REACT_APP_COINAPI_KEY}`;
 
@@ -17,7 +17,7 @@ export default function Price(props) {
       const data = await res.json();
       setCoin(data);
     } catch (e) {
-      console.error(e);
+      console.error("Error fetching data", e);
     }
   };
 
